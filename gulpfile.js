@@ -10,11 +10,11 @@ gulp.task('copyHtml', async function() {
 gulp.task('scripts', function(){
   return tsProject.src()
         .pipe(tsProject())
-        .pipe(gulp.dest('dist'))
+        .js.pipe(gulp.dest('dist'))
 })
 
-gulp.task('watch', async function(){
-    gulp.watch('src/*.ts', ['scripts']);
+gulp.task('watch', function(){
+    gulp.watch('src/*.ts', gulp.series('scripts'));
 })
 
-gulp.task('default',['copyHtml', 'scripts'])
+gulp.task('default',gulp.parallel('copyHtml', 'scripts', 'watch'))
