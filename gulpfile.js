@@ -52,4 +52,4 @@ gulp.task('watch', function(){
     gulp.watch('src/images/*', gulp.series('imgMinify'));
 })
 
-gulp.task('default',gulp.parallel('copyHtml', 'scripts', 'imgMinify', 'watch'))
+gulp.task('default',gulp.parallel('copyHtml', 'scripts', 'imgMinify', 'watch', 'sass', 'uglify'))

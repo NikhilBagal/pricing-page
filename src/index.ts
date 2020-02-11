@@ -1,2 +1,4 @@
-console.log('hello world im')
-console.log('hello0h')
+const value = document.querySelector('.switch input')
+value.addEventListener('change',() => {
+    console.log(value.checked)
+})
