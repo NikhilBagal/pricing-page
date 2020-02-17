@@ -5,18 +5,25 @@ $Light-Grayish-Blue: hsl(234, 14%, 74%);
 $Grayish-Blue: hsl(233, 13%, 49%);
 $Dark-Grayish-Blue: hsl(232, 13%, 33%);
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     border: 0;
     .container {
+      font-family: 'Montserrat', sans-serif;
       header {
         display: flex;
         flex-direction: column;
         width: 100%;
         align-items: center;
         margin-top: 3%;
-        
+        h1 {
+          font-size: 25px;
+          font-weight: 700;
+          color: $Dark-Grayish-Blue;
+        }
         .switch {
           display: flex;
           justify-content: center;
@@ -24,7 +31,9 @@ $Dark-Grayish-Blue: hsl(232, 13%, 33%);
           margin-top: 3%;
           h3 {
             margin: auto 2%;
-            color: hsl(233, 13%, 49%);
+            color: $Light-Grayish-Blue;
+            font-weight: 900;
+            font-size: 15px;
           }
           input[type='checkbox']{
             height: 30px;
