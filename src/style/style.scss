@@ -115,6 +115,11 @@ $Dark-Grayish-Blue: hsl(232, 13%, 33%);
           .price {
             font-size: 3rem;
           }
+          @media only screen and (max-width:1100px){
+            .price {
+              font-size: 2rem;
+            }
+          }
           .benefit {
             width: 80%;
             margin: 10% 10%;
@@ -180,6 +185,22 @@ $Dark-Grayish-Blue: hsl(232, 13%, 33%);
           button:hover {
             background: $Linear-Gradient;
             color: #fff;
+          }
+        }
+      }
+      @media only screen and (max-width:700px){
+        .card-sec {
+          flex-direction: column;
+          .card {
+            width: 90%;
+            margin: 5% 5%;
+            .price {
+              font-size: 3rem;
+            }
+          }
+          #card-2 {
+            transform: none;
+            margin: auto 5%;
           }
         }
       }

@@ -2,10 +2,14 @@ var value = document.querySelector('.switch input');
 var price = document.querySelectorAll('.price');
 value.addEventListener('change', function () {
     if (value.checked) {
-        price.forEach(function (item) { return check(item); });
+        for (var i = 0; i < price.length; i++) {
+            check(price[i]);
+        }
     }
     else if (value.checked === false) {
-        price.forEach(function (item) { return check(item); });
+        for (var i = 0; i < price.length; i++) {
+            check(price[i]);
+        }
     }
 });
 function check(value) {

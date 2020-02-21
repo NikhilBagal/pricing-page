@@ -1,10 +1,15 @@
 const value = <HTMLInputElement>document.querySelector('.switch input');
 const price = document.querySelectorAll('.price');
 value.addEventListener('change',() => {
+   
     if(value.checked) {
-      price.forEach(item => check(item))
+      for(var i=0;i<price.length;i++){
+         check(price[i])
+      }
     }else if (value.checked === false){
-       price.forEach(item => check(item))
+       for(var i=0;i<price.length;i++){
+         check(price[i])
+      }
     }
 })
 function check(value:any){
